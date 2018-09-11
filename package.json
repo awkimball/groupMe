@@ -9,7 +9,9 @@
   "author": "A Kimball",
   "license": "",
   "devDependencies": {
-    "electron": "^2.0.9",
+    "electron": "^2.0.9"
+  },
+  "dependencies": {
     "jquery": "^3.3.1"
   }
 }
