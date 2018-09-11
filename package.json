@@ -1,11 +1,12 @@
 {
-  "name": "groupme",
+  "name": "GroupMe",
   "version": "0.0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack:osx": "electron-packager . $npm_package_productName --out=dist/osx --platform=darwin --arch=x64 --icon=assets/groupme.icns"
+    "pack:osx": "electron-packager . $npm_package_productName --out=dist --platform=darwin --arch=x64 --icon=assets/groupme.icns",
+    "pack:win": "electron-packager . $npm_package_productName --out=dist --platform=win32 --arch=x64 --icon=assets/groupme.ico"
   },
   "author": "A Kimball",
   "license": "",
