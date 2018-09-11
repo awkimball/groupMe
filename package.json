@@ -6,7 +6,6 @@
   "scripts": {
     "start": "electron .",
     "pack:osx": "electron-packager . $npm_package_productName --out=dist/osx --platform=darwin --arch=x64 --icon=assets/groupme.icns"
-
   },
   "author": "A Kimball",
   "license": "",
