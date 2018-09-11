@@ -1,0 +1,15 @@
+{
+  "name": "groupme",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "A Kimball",
+  "license": "",
+  "devDependencies": {
+    "electron": "^2.0.9",
+    "jquery": "^3.3.1"
+  }
+}
