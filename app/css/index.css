@@ -7,9 +7,13 @@ body {
 
 }
 
-#app {
+body #app {
 
-   
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    /* align-content: stretch; */
+    height: 100vh;
 }
 
 body::before {
@@ -24,18 +28,18 @@ body::before {
 
 aside.app-sidebar {
 
-    width: 88px;
-    height:100%;
+    min-width: 68px;
     display: flex;
     flex-direction: row;
+    position: relative;
 
 
 }
 aside.app-sidebar.open {
 
-
-    width: 408px;
-    
+    min-width: 368px;
+    width: 35vw;
+    max-width: 450px;
 }
 
 
@@ -43,28 +47,25 @@ aside.app-sidebar.open {
 .pillar {
 
     position: static !important;
-    width: 88px !important;
+    width: 68px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    flex-shrink: 0;
+    justify-content: flex-start;
 
 }
 
 
 
-aside .pillar .user-navigation {
 
-    position: static;
-    width: 100%;
-    text-align: center;
+aside .pillar > * {
 
-}
-
-aside .pillar .tab, .tray-controls {
-
-    width: 100%;
-    position: static;
+    width: 100% !important;
+    height: 48px;
+    position: static !important;
+    padding: 0;
 }
 
 aside .pillar .tab.profile {
@@ -73,39 +74,75 @@ aside .pillar .tab.profile {
     width: 100%;
     height: 100%;
     padding: 0;
-
+    vertical-align: middle;
     
 }
 
-.user-navigation a {
+aside .pillar .user-navigation a {
 
-    text-align: center;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 aside .pillar .tab.profile img {
 
-    width: 50px;
-}
-
-.pillar .user-navigation:last-child {
-
-    position: relative;
-    bottom: 0;
-    
-}
-
-#tray {
-
-
-position: static !important;
+    display: block;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+    top: 0;
+    left: 0;
 
 }
 
-#page {
+aside .pillar .user-navigation:last-child {
 
-    
-   
+    margin-top: auto;
+    align-self: flex-end;
+
+}
+
+aside #tray {
+
+    position: static !important;
+    min-width: 300px;
+    width: auto;
+    display: flex;
+
+}
+
+aside .pillar .tray-controls {
+
+    margin: 0;
+    height: auto;
+
+
+}
+
+aside .pillar .tray-controls > * {
+
+    margin: 0;
+    height: 48px;
+    text-align: center;
+    position: static;
+    width: 100%;
+
+}
+
+aside.app-sidebar.open ~ #page, aside.app-sidebar ~ #page {
+
+    padding: 0;
+}
+
+#app #page  {
+
+    width: auto;
+    flex: auto;
+    overflow: auto;
+
 }
 
 button {
@@ -114,7 +151,7 @@ button {
 
 }
 
-div.accessible-focus:focus, button.accessible-focus:focus {
+div.accessible-focus:focus, button.accessible-focus:focus, a.accessible-focus:focus {
 
     outline: none !important;
 }
@@ -122,4 +159,10 @@ div.accessible-focus:focus, button.accessible-focus:focus {
 :focus {
 
     outline: -webkit-focus-ring-color auto 3px;
+}
+
+
+h1 {
+
+    display: none;
 }

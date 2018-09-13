@@ -6,8 +6,8 @@
   "scripts": {
     "start": "electron .",
     "debug": "electron . --inspect-brk=5858",
-    "pack:osx": "electron-packager . $npm_package_productName --out=dist --platform=darwin --arch=x64 --icon=assets/groupme.icns",
-    "pack:win": "electron-packager . $npm_package_productName --out=dist --platform=win32 --arch=x64 --icon=assets/groupme.ico"
+    "pack:osx": "electron-packager . $npm_package_productName --overwrite --out=dist --platform=darwin --arch=x64 --icon=assets/groupme.icns",
+    "pack:win": "electron-packager . $npm_package_productName --overwrite --out=dist --platform=win32 --arch=x64 --icon=assets/groupme.ico"
   },
   "author": "A Kimball",
   "license": "",
